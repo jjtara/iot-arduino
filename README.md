@@ -3,6 +3,10 @@ This repository contains sample(s) for connecting Arduino devices to the IBM Int
 I include all the libraries needed to run out of the box this sketch.
 Just connect the DHT22 to digital pin 2.
 
+Just copy the repository in your sketchbook folder, be sure the folder library is copy inside of your library folder.
+
+just open the iot-Arduino-tempsensor sketch!
+
 
 ##### MUST MODIFY:
 
