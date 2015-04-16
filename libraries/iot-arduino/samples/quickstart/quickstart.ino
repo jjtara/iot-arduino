@@ -8,10 +8,10 @@
 #define MQTT_MAX_PACKET_SIZE 100
 
 // Update these with values suitable for your network.
-byte mac[] = { 0x00, 0xFF, 0xBB, 0xCC, 0xDE, 0x02 };
+byte mac[] = { 0xAD, 0x00, 0x11, 0x22, 0x11, 0xDA };
 //The convention to be followed is d:quickstart:iotsample-arduino:<MAC Address>
 
-#define MQTT_CLIENTID "d:quickstart:iotsample-arduino:00ffbbccde02"
+#define MQTT_CLIENTID "d:quickstart:iotsample-arduino:ad00112211da"
 #define MQTT_TOPIC "iot-2/evt/status/fmt/json"
 
 //For Arduino Yun, instantiate a YunClient and use the instance to declare
