@@ -4,7 +4,7 @@ I include all the libraries needed to run out of the box this sketch.
 Just connect the DHT22 to digital pin 2.
 
 
-# TO MUST MODIFY:
+##### MUST MODIFY:
 
 firstly you must know that this code just works with devices that they already registered in the bluemix platform with a specific MAC address, Device type, organization and password.
 
