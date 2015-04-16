@@ -27,12 +27,9 @@ DHT dht(DHTPIN, DHTTYPE);
 int ledPin = 13;
 
 
-
-#define CLIENT_ID "d:YOUR_BLUEMIX_ORG:YOUR_DEVICE_HERE:MAC_HERE"
-#define MS_PROXY "YOUR_BLUEMIX_ORG.messaging.internetofthings.ibmcloud.com"
-#define AUTHTOKEN "BLUEMIX PASSWORD OF THE DEVICES HERE"
-
-
+#define CLIENT_ID "d:u50zsk:ArduinoUNO:ad00112211da"
+#define MS_PROXY "u50zsk.messaging.internetofthings.ibmcloud.com"
+#define AUTHTOKEN "3HP&jjhk15JC1VBZ+J"
 // Update these with values suitable for your network.
 byte mac[] = { 0xAD, 0x00, 0x11, 0x22, 0x11, 0xDA };
 
@@ -102,7 +99,7 @@ void loop() {
 
   char json[56] = "{\"d\":{\"myName\":\"Arduino Uno\",\"temperature\":";
 //  char buffer[10];
-  float tempValue = getTemp();
+  float tempValue = getTempDHT();
   dtostrf(tempValue,1,2, &json[43]);
 //  dtostrf(getTemp(),1,2, buffer);
 
@@ -211,7 +208,7 @@ double getTemp(void) {
 
 
 /*
-Funciont to read temp and humidity from  DHT22
+method to read temp and humidity from  DHT22
 juan tara.
 j.tara@arduino.cc
 */
@@ -235,7 +232,7 @@ double getTempDHT(void) {
   // Compute heat index
   // Must send in temp in Fahrenheit!
   float hi = dht.computeHeatIndex(f, h);
-
+  /*
   Serial.print("Humidity: "); 
   Serial.print(h);
   Serial.print(" %\t");
@@ -247,7 +244,7 @@ double getTempDHT(void) {
   Serial.print("Heat index: ");
   Serial.print(hi);
   Serial.println(" *F");
-  
+  */
   return (t);
   
 }
